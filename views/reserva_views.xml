@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="view_reserva_tree" model="ir.ui.view">
+            <field name="name">reservas.reserva.tree</field>
+            <field name="model">reservas.reserva</field>
+            <field name="arch" type="xml">
+                <list string="Lista de Reservas">
+                    <field name="cliente_id"/>
+                    <field name="producto_id"/>
+                    <field name="fecha_reserva"/>
+                    <field name="estado"/>
+                    <field name="descuento"/>
+                    <field name="llegada_aprox"/>
+                    <field name="dias_reserva"/>
+                </list>
+            </field>
+        </record>
+    </data>
+</odoo>

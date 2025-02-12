@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- Acción para la vista de lista de Reservas -->
+        <record id="action_reservas" model="ir.actions.act_window">
+            <field name="name">Reservas</field>
+            <field name="res_model">reservas.reserva</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_reserva_tree"/>
+        </record>
+
+        <!-- Acción para la vista de lista de Productos -->
+        <record id="action_Productos" model="ir.actions.act_window">
+            <field name="name">Productos</field>
+            <field name="res_model">reservas.producto</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,7 @@
+<odoo>
+   <record id="encargado_tienda" model="res.groups">
+       <field name="name">Encargado de Tienda</field>
+       <field name="category_id" ref="base.module_category_hidden"/>
+   </record>
+</odoo>
+

@@ -1,0 +1,43 @@
+<odoo>
+    <template id="reserva_form" name="Formulario de Reserva">
+        <t t-call="website.layout">
+            <div class="container">
+                <h2>Realiza tu Reserva</h2>
+                <form action="/reservas/web/submit" method="post">
+                    <div class="form-group">
+                        <label for="producto_id">Producto</label>
+                        <select name="producto_id" id="producto_id" class="form-control">
+                            <t t-foreach="productos" t-as="producto">
+                                <option t-att-value="producto.id"><t t-esc="producto.nombre"/></option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha_reserva">Fecha de Reserva</label>
+                        <input type="date" name="fecha_reserva" id="fecha_reserva" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                        <label for="descuento">Precio de reserva</label>
+                        <input type="numberDecimal" name="descuento" id="descuento" class="form-control" required/>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Reservar</button>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <template id="reserva_confirmation" name="Confirmación de Reserva">
+        <t t-call="website.layout">
+            <div class="container">
+                <h2>Reserva Confirmada</h2>
+                <p>Tu reserva ha sido realizada con éxito. Detalles de la reserva:</p>
+                <ul>
+                    <li>Cliente: <t t-esc="reserva.cliente_id.name"/></li>
+                    <li>Producto: <t t-esc="reserva.producto_id.nombre"/></li>
+                    <li>Fecha de Reserva: <t t-esc="reserva.fecha_reserva"/></li>
+                    <li>Descuento: <t t-esc="reserva.descuento"/></li>
+                </ul>
+            </div>
+        </t>
+    </template>
+</odoo>

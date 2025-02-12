@@ -1,0 +1,9 @@
+<odoo>
+    <menuitem id="reserva_menu_root"
+        name="Reservas"
+        action="action_reservas"></menuitem>
+    <menuitem id="reserva_submenu"
+        name="Reservas"
+        parent="reserva_menu_root"
+        action="action_reservas"></menuitem>
+</odoo>
